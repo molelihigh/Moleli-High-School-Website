@@ -2,321 +2,160 @@
 <html>
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="msvalidate.01" content="A233C636487F3D4EDD3758E2E3D9114A" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="google-site-verification"
-  content="VZqoCS_Ajcn6eVThnFTJmdxHBh_vMWRR4AztOgEb0Jo" />
+<title>School Registration - Moleli High School</title>
 
-  <meta name="description"
-  content="Official website of Moleli High School. News, admissions, academics, and contact information.">
+<style>
 
-  <title>Moleli High School Official Website</title>
+body{
+    font-family: Arial, sans-serif;
+    background-color:#e8f5e9;
+    margin:0;
+    padding:0;
+}
 
-  <link rel="icon" type="image/x-icon" href="molelilogo.png">
+header{
+    background-color:green;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-  <style>
+.form-container{
+    background:white;
+    width:80%;
+    max-width:700px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
 
-    body{
-      margin:0;
-      padding:0;
-      font-family:Arial, sans-serif;
-      background-color:#e8f5e9;
-    }
+h2{
+    color:green;
+    text-align:center;
+}
 
-    header{
-      background-color:green;
-      color:white;
-      text-align:center;
-      padding:20px;
-    }
+label{
+    font-weight:bold;
+}
 
-    header img{
-      width:120px;
-      height:auto;
-      margin-bottom:10px;
-    }
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
 
-    nav{
-      background-color:red;
-      text-align:center;
-      padding:12px;
-    }
+button{
+    background-color:red;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 15px;
-      font-weight:bold;
-    }
+button:hover{
+    background-color:darkred;
+}
 
-    nav a:hover{
-      color:yellow;
-    }
+footer{
+    background-color:#0b3d0b;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
 
-    section{
-      background-color:white;
-      margin:20px;
-      padding:20px;
-      border-radius:10px;
-    }
-
-    h2{
-      color:green;
-    }
-
-    .map-button{
-      background-color:green;
-      color:white;
-      border:none;
-      padding:12px 20px;
-      border-radius:5px;
-      cursor:pointer;
-      font-size:16px;
-    }
-
-    .map-button:hover{
-      background-color:darkgreen;
-    }
-
-    footer{
-      background-color:#0b3d0b;
-      color:white;
-      padding:40px 20px;
-      margin-top:40px;
-    }
-
-    .footer-container{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:space-between;
-    }
-
-    .footer-box{
-      flex:1;
-      min-width:220px;
-      margin:10px;
-    }
-
-    footer a{
-      color:white;
-      text-decoration:none;
-    }
-
-    footer a:hover{
-      color:yellow;
-    }
-
-    .newsletter-input{
-      width:80%;
-      padding:12px;
-      border:none;
-      border-radius:5px;
-      font-size:16px;
-    }
-
-    .newsletter-button{
-      background-color:red;
-      color:white;
-      border:none;
-      padding:12px 25px;
-      border-radius:5px;
-      cursor:pointer;
-      font-size:16px;
-    }
-
-    .newsletter-button:hover{
-      background-color:darkred;
-    }
-
-    .bottom-footer{
-      text-align:center;
-      margin-top:20px;
-    }
-
-  </style>
+</style>
 
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
+<header>
 
-    <img src="methodistlogo.png" alt="Moleli High School Logo">
+<h1>Moleli High School Registration</h1>
 
-    <h1>Welcome to Moleli High School</h1>
+<p>Apply Online</p>
 
-    <p>Excellence and Discipline</p>
+</header>
 
-  </header>
+<div class="form-container">
 
-  <!-- NAVIGATION -->
-  <nav>
+<h2>Student Registration Form</h2>
 
-    <a href="index.html">Home</a>
+<!-- FORMSPREE FORM -->
+<form action="https://formspree.io/f/mdajnbyd" method="POST">
 
-    <a href="news.html">News</a>
+<label>Full Name</label>
+<input type="text" name="fullname" required>
 
-    <a href="gallery.html">Gallery</a>
+<label>Date of Birth</label>
+<input type="date" name="dob" required>
 
-    <a href="contact.html">Contact</a>
+<label>Gender</label>
+<select name="gender" required>
+    <option value="">Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+</select>
 
-  </nav>
+<label>Email Address</label>
+<input type="email" name="email" required>
 
-  <!-- ABOUT SECTION -->
-  <section>
+<label>Phone Number</label>
+<input type="tel" name="phone" required>
 
-    <h2>About Us</h2>
+<label>Parent/Guardian Name</label>
+<input type="text" name="guardian" required>
 
-    <p>
-      Moleli High School is committed to academic excellence and holistic education.
-      We nurture students to become responsible leaders through discipline,
-      innovation, and quality education.
-    </p>
+<label>Parent/Guardian Phone</label>
+<input type="tel" name="guardianphone" required>
 
-  </section>
+<label>Address</label>
+<textarea name="address" rows="4" required></textarea>
 
-  <!-- LOCATION -->
-  <section>
+<label>Grade Applying For</label>
+<select name="grade" required>
+    <option value="">Select Grade</option>
+    <option>Form 1</option>
+    <option>Form 2</option>
+    <option>Form 3</option>
+    <option>Form 4</option>
+    <option>Lower 6</option>
+    <option>Upper 6</option>
+</select>
 
-    <h2>Our School Location</h2>
+<label>Previous School</label>
+<input type="text" name="previousschool">
 
-    <p>
-      Find Moleli High School easily using Google Maps.
-    </p>
+<label>Reason for Applying</label>
+<textarea name="reason" rows="5"></textarea>
 
-    <a href="https://maps.app.goo.gl/8CesHpkyHBzRjty78" target="_blank">
+<button type="submit">
+    Submit Registration
+</button>
 
-      <button class="map-button">
+</form>
 
-        View on Google Maps
+</div>
 
-      </button>
+<footer>
 
-    </a>
+<p>
+© 2026 Moleli High School | Online Registration System
+</p>
 
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="footer-container">
-
-      <!-- SCHOOL INFO -->
-      <div class="footer-box">
-
-        <h2 style="color:white;">Moleli High School</h2>
-
-        <p>
-          Nurturing young minds to become tomorrow's leaders through quality
-          education, character development, and academic excellence in Zimbabwe.
-        </p>
-
-      </div>
-
-      <!-- QUICK LINKS -->
-      <div class="footer-box">
-
-        <h3>Quick Links</h3>
-
-        <p><a href="about.html">About Us</a></p>
-
-        <p><a href="academics.html">Academics</a></p>
-
-        <p><a href="admissions.html">Admissions</a></p>
-
-        <p><a href="sports.html">Sports</a></p>
-
-        <p><a href="clubs.html">Clubs</a></p>
-
-        <p><a href="gallery.html">Gallery</a></p>
-
-      </div>
-
-      <!-- ACADEMIC RESOURCES -->
-      <div class="footer-box">
-
-        <h3>Academic Resources</h3>
-
-        <p>
-          <a href="https://www.brainstake.tech" target="_blank">
-            Student Portal
-          </a>
-        </p>
-
-        <p><a href="lms.html">Learning Management System</a></p>
-
-        <p><a href="calendar.html">Academic Calendar</a></p>
-
-        <p><a href="dashboard.html">Historical Dashboard</a></p>
-
-        <p><a href="library.html">Library</a></p>
-
-      </div>
-
-      <!-- CONTACT -->
-      <div class="footer-box">
-
-        <h3>Contact Information</h3>
-
-        <p>
-          Private Bag 501,<br>
-          Norton, Zimbabwe
-        </p>
-
-        <p>+27781399952</p>
-
-        <p>sheunesurera@gmail.com</p>
-
-      </div>
-
-      <!-- NEWSLETTER -->
-      <div class="footer-box">
-
-        <h3>Stay Updated</h3>
-
-        <p>
-          Subscribe to our newsletter for the latest news and updates
-        </p>
-
-        <!-- FORMSPREE FORM -->
-        <form action="https://formspree.io/f/mbdbrway" method="POST">
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            class="newsletter-input"
-            required
-          >
-
-          <br><br>
-
-          <button type="submit" class="newsletter-button">
-            Subscribe
-          </button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-    <hr style="margin:30px 0; border-color:#ffffff44;">
-
-    <div class="bottom-footer">
-
-      <p>
-        © 2026 Moleli High School. All rights reserved |
-        Privacy Policy |
-        Terms of Service
-      </p>
-
-    </div>
-
-  </footer>
+</footer>
 
 </body>
 </html>
