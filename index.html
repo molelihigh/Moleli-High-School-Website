@@ -2,19 +2,21 @@
 <html>
 <head>
 
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="msvalidate.01" content="A233C636487F3D4EDD3758E2E3D9114A" />
-
-  <title>Moleli High School Official Website</title>
-
-  <link rel="icon" type="image/x-icon" href="molelilogo.png">
-
-  <meta name="description"
-  content="Official website of Moleli High School. News, admissions, academics, and contact information.">
 
   <meta name="google-site-verification"
   content="VZqoCS_Ajcn6eVThnFTJmdxHBh_vMWRR4AztOgEb0Jo" />
 
-  <meta charset="UTF-8">
+  <meta name="description"
+  content="Official website of Moleli High School. News, admissions, academics, and contact information.">
+
+  <title>Moleli High School Official Website</title>
+
+  <link rel="icon" type="image/x-icon" href="molelilogo.png">
 
   <style>
 
@@ -24,6 +26,8 @@
       padding:0;
       background-color:#e8f5e9;
     }
+
+    /* HEADER */
 
     header{
       background-color:green;
@@ -38,33 +42,90 @@
       margin-bottom:10px;
     }
 
+    /* MODERN NAVBAR */
+
     nav{
-      background-color:red;
-      padding:12px;
+      background: linear-gradient(90deg, #b30000, #ff1a1a);
+      padding:15px;
       text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
     nav a{
-      margin:0 15px;
-      text-decoration:none;
       color:white;
+      text-decoration:none;
+      margin:0 12px;
+      padding:10px 18px;
       font-weight:bold;
+      border-radius:30px;
+      transition:0.3s;
+      display:inline-block;
     }
 
     nav a:hover{
-      color:yellow;
+      background-color:white;
+      color:red;
+      transform:translateY(-3px);
     }
+
+    .register-btn{
+      background-color:green;
+    }
+
+    .register-btn:hover{
+      background-color:yellow;
+      color:black;
+    }
+
+    /* SECTIONS */
 
     section{
       padding:20px;
       background-color:white;
       margin:20px;
       border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      animation:fadein 1s;
+    }
+
+    @keyframes fadein{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
     }
 
     h2{
       color:green;
     }
+
+    /* MAP BUTTON */
+
+    .map-button{
+      padding:12px 20px;
+      background-color:green;
+      color:white;
+      border:none;
+      border-radius:5px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .map-button:hover{
+      background-color:darkgreen;
+      transform:scale(1.05);
+    }
+
+    /* FOOTER */
 
     footer{
       background-color:#0b3d0b;
@@ -94,6 +155,8 @@
       margin:10px;
     }
 
+    /* NEWSLETTER */
+
     .newsletter-input{
       padding:12px;
       width:80%;
@@ -110,29 +173,17 @@
       border-radius:5px;
       cursor:pointer;
       font-size:16px;
+      transition:0.3s;
     }
 
     .newsletter-button:hover{
       background-color:darkred;
+      transform:scale(1.05);
     }
 
     .bottom-footer{
       text-align:center;
       margin-top:20px;
-    }
-
-    .map-button{
-      padding:12px 20px;
-      background-color:green;
-      color:white;
-      border:none;
-      border-radius:5px;
-      font-size:16px;
-      cursor:pointer;
-    }
-
-    .map-button:hover{
-      background-color:darkgreen;
     }
 
   </style>
@@ -142,6 +193,7 @@
 <body>
 
   <!-- HEADER -->
+
   <header>
 
     <img src="methodistlogo.png" alt="Moleli High School Logo">
@@ -152,7 +204,8 @@
 
   </header>
 
-  <!-- NAVIGATION -->
+  <!-- MODERN NAVIGATION -->
+
   <nav>
 
     <a href="index.html">Home</a>
@@ -163,20 +216,28 @@
 
     <a href="contact.html">Contact</a>
 
+    <a href="reg.html" class="register-btn">
+      Register Now
+    </a>
+
   </nav>
 
   <!-- ABOUT -->
+
   <section>
 
     <h2>About Us</h2>
 
     <p>
       Moleli High School is committed to academic excellence and holistic education.
+      We nurture students to become responsible leaders through discipline,
+      innovation, and quality education.
     </p>
 
   </section>
 
   <!-- MAP -->
+
   <section>
 
     <h2>Our School Location</h2>
@@ -198,11 +259,13 @@
   </section>
 
   <!-- FOOTER -->
+
   <footer>
 
     <div class="footer-container">
 
       <!-- SCHOOL INFO -->
+
       <div class="footer-box">
 
         <h2 style="color:white;">Moleli High School</h2>
@@ -215,6 +278,7 @@
       </div>
 
       <!-- QUICK LINKS -->
+
       <div class="footer-box">
 
         <h3>Quick Links</h3>
@@ -234,6 +298,7 @@
       </div>
 
       <!-- ACADEMIC RESOURCES -->
+
       <div class="footer-box">
 
         <h3>Academic Resources</h3>
@@ -255,12 +320,13 @@
       </div>
 
       <!-- CONTACT -->
+
       <div class="footer-box">
 
         <h3>Contact Information</h3>
 
         <p>
-          Private Bag 501,<br>
+          Private Bag 927,<br>
           Norton, Zimbabwe
         </p>
 
@@ -271,6 +337,7 @@
       </div>
 
       <!-- NEWSLETTER -->
+
       <div class="footer-box">
 
         <h3>Stay Updated</h3>
@@ -279,8 +346,7 @@
           Subscribe to our newsletter for the latest news and updates
         </p>
 
-        <!-- FORMSpree FORM -->
-        <form action="https://formspree.io/f/xxxxxxxx" method="POST">
+        <form action="https://formspree.io/f/mbdbrway" method="POST">
 
           <input
             type="email"
