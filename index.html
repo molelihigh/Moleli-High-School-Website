@@ -83,16 +83,17 @@ nav a:hover{
 }
 
 .slides{
+    display:flex;
     width:300%;
     height:100%;
-    display:flex;
     animation:slide 18s infinite;
 }
 
 .slide{
-    width:100%;
+    width:100vw;
     height:100%;
     position:relative;
+    flex-shrink:0;
 }
 
 .slide img{
@@ -112,6 +113,8 @@ nav a:hover{
     top:0;
     left:0;
 }
+
+/* TEXT */
 
 .slide-text{
     position:absolute;
@@ -133,6 +136,8 @@ nav a:hover{
     margin-bottom:25px;
 }
 
+/* BUTTON */
+
 .btn{
     display:inline-block;
     background:green;
@@ -149,7 +154,7 @@ nav a:hover{
     transform:scale(1.05);
 }
 
-/* ANIMATION */
+/* SLIDER ANIMATION */
 
 @keyframes slide{
 
@@ -157,24 +162,28 @@ nav a:hover{
         transform:translateX(0);
     }
 
-    25%{
+    20%{
         transform:translateX(0);
     }
 
-    33%{
-        transform:translateX(-100%);
+    25%{
+        transform:translateX(-100vw);
     }
 
-    58%{
-        transform:translateX(-100%);
+    45%{
+        transform:translateX(-100vw);
     }
 
-    66%{
-        transform:translateX(-200%);
+    50%{
+        transform:translateX(-200vw);
     }
 
-    91%{
-        transform:translateX(-200%);
+    70%{
+        transform:translateX(-200vw);
+    }
+
+    75%{
+        transform:translateX(0);
     }
 
     100%{
@@ -196,7 +205,7 @@ h2{
     color:green;
 }
 
-/* BUTTON */
+/* MAP BUTTON */
 
 .map-button{
     background:green;
@@ -547,4 +556,5 @@ All rights reserved.
 </footer>
 
 </body>
+
 </html>
