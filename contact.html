@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Moleli High School</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* NAVIGATION */
+nav{
+    background:darkgreen;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#003300,#006600,#00aa00);
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* MAIN CONTAINER */
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:35px;
+}
+
+/* CONTACT FORM */
+.contact-form{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form h2{
+    color:darkgreen;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.contact-form p{
+    margin-bottom:30px;
+    color:#666;
+    font-size:18px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    font-size:17px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+    border-color:green;
+    outline:none;
+    box-shadow:0 0 10px rgba(0,128,0,0.2);
+}
+
+textarea{
+    min-height:180px;
+    resize:vertical;
+}
+
+/* BUTTON */
+.btn{
+    background:darkgreen;
+    color:white;
+    border:none;
+    padding:16px 35px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:green;
+    transform:scale(1.05);
+}
+
+/* SIDEBAR */
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:darkgreen;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:flex-start;
+    margin-bottom:25px;
+}
+
+.contact-item i{
+    font-size:24px;
+    color:green;
+    margin-right:15px;
+    margin-top:5px;
+}
+
+.contact-item h4{
+    margin-bottom:5px;
+}
+
+/* SOCIALS */
+.socials{
+    margin-top:20px;
+}
+
+.socials a{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    border-radius:50%;
+    background:darkgreen;
+    color:white;
+    margin-right:10px;
+    font-size:22px;
+    transition:0.3s;
+}
+
+.socials a:hover{
+    background:green;
+    transform:translateY(-5px);
+}
+
+/* MAP */
+.map{
+    width:90%;
+    max-width:1400px;
+    margin:50px auto;
+}
+
+.map iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FAQ */
+.faq{
+    width:90%;
+    max-width:1400px;
+    margin:60px auto;
+}
+
+.faq h2{
+    text-align:center;
+    color:darkgreen;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.faq-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+.faq-box h3{
+    color:darkgreen;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#003300;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:10px 0;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="academics.html">Academics</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="contact.html">Contact</a>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+    <h1>Contact Moleli High School</h1>
+
+    <p>
+        We are here to assist students, parents and visitors.
+        Contact us for admissions, academics, boarding,
+        sports and general inquiries.
+    </p>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- FORM -->
+    <div class="contact-form">
+
+        <h2>Send Us A Message</h2>
+
+        <p>
+            Fill in the form below and we will respond to your inquiry.
+        </p>
+
+        <!-- FORMSPREE FORM -->
+        <form action="https://formspree.io/f/mykvzvnq" method="POST">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Full Name *</label>
+
+                    <input
+                    type="text"
+                    name="Full Name"
+                    placeholder="Enter your full name"
+                    required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Email Address *</label>
+
+                    <input
+                    type="email"
+                    name="Email"
+                    placeholder="Enter your email"
+                    required>
+
+                </div>
+
+            </div>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                    type="text"
+                    name="Phone Number"
+                    placeholder="Enter your phone number">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Inquiry Type *</label>
+
+                    <select name="Inquiry Type">
+
+                        <option>Admissions</option>
+                        <option>Academics</option>
+                        <option>Boarding</option>
+                        <option>Sports</option>
+                        <option>Events</option>
+                        <option>General Inquiry</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Subject *</label>
+
+                <input
+                type="text"
+                name="Subject"
+                placeholder="Enter subject"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Message *</label>
+
+                <textarea
+                name="Message"
+                placeholder="Write your message here..."
+                required></textarea>
+
+            </div>
+
+            <!-- SUCCESS REDIRECT -->
+            <input
+            type="hidden"
+            name="_next"
+            value="thankyou.html">
+
+            <button class="btn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <!-- CONTACT INFO -->
+        <div class="card">
+
+            <h3>Contact Information</h3>
+
+            <div class="contact-item">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+
+                    <h4>School Address</h4>
+
+                    <p>Moleli High School</p>
+
+                    <p>Private Bag, Zimbabwe</p>
+
+                </div>
+
+            </div>
+
+            <div class="contact-item">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <div>
+
+                    <h4>Email Address</h4>
+
+                    <p>sheunesurera@gmail.com</p>
+
+                </div>
+
+            </div>
+
+            <div class="contact-item">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <div>
+
+                    <h4>Phone Number</h4>
+
+                    <p></p>
+
+                </div>
+
+            </div>
+
+            <div class="contact-item">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <div>
+
+                    <h4>Office Hours</h4>
+
+                    <p>Monday - Friday</p>
+
+                    <p>7:30 AM - 4:30 PM</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <div class="card">
+
+            <h3>Connect With Us</h3>
+
+            <p>
+                Follow Moleli High School on social media.
+            </p>
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- GOOGLE MAP -->
+<section class="map">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-box">
+
+        <h3>How do I apply for admission?</h3>
+
+        <p>
+            Visit the admissions page or contact the school office.
+        </p>
+
+    </div>
+
+    <div class="faq-box">
+
+        <h3>Does the school offer boarding facilities?</h3>
+
+        <p>
+            Yes, Moleli High School offers boarding facilities.
+        </p>
+
+    </div>
+
+    <div class="faq-box">
+
+        <h3>Can parents schedule school visits?</h3>
+
+        <p>
+            Yes, parents and guardians can arrange school visits.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>Moleli High School</h2>
+
+    <p>Empowering Students Through Education & Excellence</p>
+
+    <p>© 2026 Moleli High School Official Website</p>
+
+</footer>
+
+</body>
+</html>
