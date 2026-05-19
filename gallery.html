@@ -12,6 +12,7 @@ body{
     margin:0;
     font-family:Arial, sans-serif;
     background:#f2f2f2;
+    scroll-behavior:smooth;
 }
 
 /* HEADER */
@@ -38,6 +39,7 @@ nav{
     text-align:center;
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
 nav a{
@@ -65,14 +67,16 @@ nav a:hover{
 }
 
 /* GALLERY GRID */
-.gallery{
+.gallery,
+.admin-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
 /* CARD */
-.card{
+.card,
+.admin-card{
     background:white;
     border-radius:15px;
     overflow:hidden;
@@ -80,20 +84,72 @@ nav a:hover{
     transition:0.3s;
 }
 
-.card:hover{
+.card:hover,
+.admin-card:hover{
     transform:translateY(-5px);
 }
 
-.card img{
+.card img,
+.admin-card img{
     width:100%;
-    height:220px;
+    height:250px;
     object-fit:cover;
+    cursor:pointer;
 }
 
 .card p{
     padding:15px;
     font-weight:bold;
     color:#333;
+}
+
+.admin-card h3{
+    margin:10px 0 5px;
+    color:darkgreen;
+}
+
+.admin-card p{
+    padding-bottom:15px;
+    color:#333;
+    font-weight:bold;
+}
+
+/* LIGHTBOX */
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    padding-top:60px;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+}
+
+.lightbox-content{
+    display:block;
+    margin:auto;
+    max-width:90%;
+    max-height:80%;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#caption{
+    text-align:center;
+    color:white;
+    margin-top:15px;
+    font-size:20px;
 }
 
 /* FOOTER */
@@ -121,6 +177,8 @@ footer{
     <a href="#church">Church</a>
     <a href="#environment">Environment</a>
     <a href="#fun">Fun</a>
+    <a href="#admin">School Admin</a>
+    <a href="#prefects">Prefects</a>
 </nav>
 
 <!-- ACADEMICS -->
@@ -130,22 +188,22 @@ footer{
     <div class="gallery">
 
         <div class="card">
-            <img src="students.png">
-            <p>Students At The Robotics competitions</p>
+            <img src="students.png" onclick="openImage(this)">
+            <p>Students At The Robotics Competitions</p>
         </div>
 
         <div class="card">
-            <img src="">
+            <img src="science.jpg" onclick="openImage(this)">
             <p>Science Practical Lesson</p>
         </div>
 
         <div class="card">
-            <img src="academic3.jpg">
+            <img src="academic3.jpg" onclick="openImage(this)">
             <p>Computer Laboratory</p>
         </div>
 
         <div class="card">
-            <img src="academic4.jpg">
+            <img src="academic4.jpg" onclick="openImage(this)">
             <p>Library Research Session</p>
         </div>
 
@@ -159,22 +217,22 @@ footer{
     <div class="gallery">
 
         <div class="card">
-            <img src="sports1.jpg">
+            <img src="sports1.jpg" onclick="openImage(this)">
             <p>Football Team Match</p>
         </div>
 
         <div class="card">
-            <img src="sports2.jpg">
+            <img src="sports2.jpg" onclick="openImage(this)">
             <p>Basketball Training</p>
         </div>
 
         <div class="card">
-            <img src="sports3.jpg">
+            <img src="sports3.jpg" onclick="openImage(this)">
             <p>Athletics Competition</p>
         </div>
 
         <div class="card">
-            <img src="sports4.jpg">
+            <img src="sports4.jpg" onclick="openImage(this)">
             <p>Volleyball Practice</p>
         </div>
 
@@ -188,22 +246,22 @@ footer{
     <div class="gallery">
 
         <div class="card">
-            <img src="church1.jpg">
+            <img src="church1.jpg" onclick="openImage(this)">
             <p>School Chapel Service</p>
         </div>
 
         <div class="card">
-            <img src="danc.png">
+            <img src="danc.png" onclick="openImage(this)">
             <p>Students Worship Session</p>
         </div>
 
         <div class="card">
-            <img src="choir.png">
+            <img src="choir.png" onclick="openImage(this)">
             <p>Choir Performance</p>
         </div>
 
         <div class="card">
-            <img src="church.png">
+            <img src="church.png" onclick="openImage(this)">
             <p>Prayer Gathering</p>
         </div>
 
@@ -217,22 +275,22 @@ footer{
     <div class="gallery">
 
         <div class="card">
-            <img src="environment1.jpg">
+            <img src="environment1.jpg" onclick="openImage(this)">
             <p>Beautiful School Buildings</p>
         </div>
 
         <div class="card">
-            <img src="hall.webp">
-            <p>Inside the school hall</p>
+            <img src="hall.webp" onclick="openImage(this)">
+            <p>Inside The School Hall</p>
         </div>
 
         <div class="card">
-            <img src="cleanenv.png">
+            <img src="cleanenv.png" onclick="openImage(this)">
             <p>Clean Environment</p>
         </div>
 
         <div class="card">
-            <img src="environment4.jpg">
+            <img src="environment4.jpg" onclick="openImage(this)">
             <p>School Assembly Ground</p>
         </div>
 
@@ -246,31 +304,141 @@ footer{
     <div class="gallery">
 
         <div class="card">
-            <img src="fun.jpg">
+            <img src="fun.jpg" onclick="openImage(this)">
             <p>School Trip Adventure</p>
         </div>
 
         <div class="card">
-            <img src="fun1.jpg">
+            <img src="fun1.jpg" onclick="openImage(this)">
             <p>Students Enjoying Events</p>
         </div>
 
         <div class="card">
-            <img src="visit.png">
+            <img src="visit.png" onclick="openImage(this)">
             <p>Visiting Day</p>
         </div>
 
         <div class="card">
-            <img src="fun4.jpg">
+            <img src="fun4.jpg" onclick="openImage(this)">
             <p>Cultural Day Celebration</p>
         </div>
 
     </div>
 </section>
 
+<!-- SCHOOL ADMIN -->
+<section class="section" id="admin">
+    <h2>School Administration</h2>
+
+    <div class="admin-grid">
+
+        <div class="admin-card">
+            <img src="headmaster.jpg" onclick="openImage(this)">
+            <h3>Mr Gundani</h3>
+            <p>Headmaster</p>
+        </div>
+
+        <div class="admin-card">
+            <img src="deputy.jpg" onclick="openImage(this)">
+            <h3>Mr Mupambirei</h3>
+            <p>Deputy Headmaster</p>
+        </div>
+
+        <div class="admin-card">
+            <img src="principal.jpg" onclick="openImage(this)">
+            <h3>Rev Mutemasango</h3>
+            <p>Principal</p>
+        </div>
+
+        <div class="admin-card">
+            <img src="seniorlady.jpg" onclick="openImage(this)">
+            <h3>Mrs Gundani</h3>
+            <p>Senior Lady</p>
+        </div>
+
+        <div class="admin-card">
+            <img src="seniormaster.jpg" onclick="openImage(this)">
+            <h3>Mr Taro</h3>
+            <p>Senior Master</p>
+        </div>
+
+        <div class="admin-card">
+            <img src="chaplin.jpg" onclick="openImage(this)">
+            <h3>Rev Maweni</h3>
+            <p>Chaplin</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PREFECTS -->
+<section class="section" id="prefects">
+    <h2>School Prefects</h2>
+
+    <div class="admin-grid">
+
+        <div class="admin-card">
+            <img src="headboy.jpg" onclick="openImage(this)">
+            <h3>Dean Mushaninga</h3>
+            <p>Headboy</p>
+        </div>
+
+        <div class="admin-card">
+            <img src="headgirl.jpg" onclick="openImage(this)">
+            <h3>Tapuwanashe Mutombeni</h3>
+            <p>Headgirl</p>
+        </div>
+
+        <div class="admin-card">
+            <img src="viceheadboy.jpg" onclick="openImage(this)">
+            <h3>Prosper Mudzamiri</h3>
+            <p>Vice Headboy</p>
+        </div>
+
+        <div class="admin-card">
+            <img src="viceheadgirl.jpg" onclick="openImage(this)">
+            <h3>Manyanda G</h3>
+            <p>Vice Headgirl</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+
+    <span class="close" onclick="closeImage()">&times;</span>
+
+    <img class="lightbox-content" id="lightbox-img">
+
+    <div id="caption"></div>
+
+</div>
+
 <footer>
     <p>© 2026 Moleli High School Official Gallery</p>
 </footer>
+
+<script>
+
+function openImage(img){
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = img.src;
+
+    let text = "";
+
+    if(img.parentElement.querySelector("p")){
+        text = img.parentElement.querySelector("p").innerHTML;
+    }
+
+    document.getElementById("caption").innerHTML = text;
+}
+
+function closeImage(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+</script>
 
 </body>
 </html>
