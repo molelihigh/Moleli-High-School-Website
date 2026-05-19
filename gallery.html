@@ -10,7 +10,7 @@
 
 body{
     margin:0;
-    font-family: Arial, sans-serif;
+    font-family:Arial, sans-serif;
     background:#f2f2f2;
 }
 
@@ -18,22 +18,33 @@ body{
 header{
     background:darkgreen;
     color:white;
-    padding:20px;
     text-align:center;
+    padding:25px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
 }
 
 /* NAVIGATION */
 nav{
     background:#004d00;
-    padding:12px;
+    padding:15px;
     text-align:center;
+    position:sticky;
+    top:0;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
-    font-size:18px;
+    margin:12px;
+    font-size:17px;
     font-weight:bold;
 }
 
@@ -43,13 +54,14 @@ nav a:hover{
 
 /* SECTION */
 .section{
-    padding:30px;
+    padding:40px 20px;
     text-align:center;
 }
 
 .section h2{
     color:darkgreen;
-    margin-bottom:20px;
+    margin-bottom:25px;
+    font-size:32px;
 }
 
 /* GALLERY GRID */
@@ -57,20 +69,19 @@ nav a:hover{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
-    padding:10px;
 }
 
-/* IMAGE CARD */
+/* CARD */
 .card{
     background:white;
-    border-radius:12px;
+    border-radius:15px;
     overflow:hidden;
     box-shadow:0 4px 10px rgba(0,0,0,0.2);
     transition:0.3s;
 }
 
 .card:hover{
-    transform:scale(1.03);
+    transform:translateY(-5px);
 }
 
 .card img{
@@ -90,7 +101,7 @@ footer{
     background:#004d00;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
     margin-top:30px;
 }
 
@@ -101,89 +112,164 @@ footer{
 
 <header>
     <h1>Moleli High School Gallery</h1>
-    <p>Academics • Sports • Fun Activities</p>
+    <p>Academics • Sports • Church • Environment • Fun Activities</p>
 </header>
 
 <nav>
     <a href="#academics">Academics</a>
     <a href="#sports">Sports</a>
+    <a href="#church">Church</a>
+    <a href="#environment">Environment</a>
     <a href="#fun">Fun</a>
 </nav>
 
-<!-- ACADEMICS SECTION -->
+<!-- ACADEMICS -->
 <section class="section" id="academics">
     <h2>Academic Activities</h2>
 
     <div class="gallery">
 
         <div class="card">
-            <img src="academic1.jpg" alt="Students studying">
+            <img src="academic1.jpg">
             <p>Students Studying in Class</p>
         </div>
 
         <div class="card">
-            <img src="academic2.jpg" alt="Computer lab">
+            <img src="academic2.jpg">
+            <p>Science Practical Lesson</p>
+        </div>
+
+        <div class="card">
+            <img src="academic3.jpg">
             <p>Computer Laboratory</p>
         </div>
 
         <div class="card">
-            <img src="academic3.jpg" alt="Science lesson">
-            <p>Science Practical Lesson</p>
+            <img src="academic4.jpg">
+            <p>Library Research Session</p>
         </div>
 
     </div>
 </section>
 
-<!-- SPORTS SECTION -->
+<!-- SPORTS -->
 <section class="section" id="sports">
     <h2>Sports Activities</h2>
 
     <div class="gallery">
 
         <div class="card">
-            <img src="sports1.jpg" alt="Football match">
+            <img src="sports1.jpg">
             <p>Football Team Match</p>
         </div>
 
         <div class="card">
-            <img src="sports2.jpg" alt="Basketball">
+            <img src="sports2.jpg">
             <p>Basketball Training</p>
         </div>
 
         <div class="card">
-            <img src="sports3.jpg" alt="Athletics">
+            <img src="sports3.jpg">
             <p>Athletics Competition</p>
+        </div>
+
+        <div class="card">
+            <img src="sports4.jpg">
+            <p>Volleyball Practice</p>
         </div>
 
     </div>
 </section>
 
-<!-- FUN SECTION -->
-<section class="section" id="fun">
-    <h2>Fun & School Life</h2>
+<!-- CHURCH -->
+<section class="section" id="church">
+    <h2>Church & Spiritual Life</h2>
 
     <div class="gallery">
 
         <div class="card">
-            <img src="fun.jpg" alt="School trip">
+            <img src="church1.jpg">
+            <p>School Chapel Service</p>
+        </div>
+
+        <div class="card">
+            <img src="church2.jpg">
+            <p>Students Worship Session</p>
+        </div>
+
+        <div class="card">
+            <img src="church3.jpg">
+            <p>Choir Performance</p>
+        </div>
+
+        <div class="card">
+            <img src="church4.jpg">
+            <p>Prayer Gathering</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ENVIRONMENT -->
+<section class="section" id="environment">
+    <h2>School Environment</h2>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="environment1.jpg">
+            <p>Beautiful School Buildings</p>
+        </div>
+
+        <div class="card">
+            <img src="environment2.jpg">
+            <p>Green School Gardens</p>
+        </div>
+
+        <div class="card">
+            <img src="environment3.jpg">
+            <p>Clean Learning Environment</p>
+        </div>
+
+        <div class="card">
+            <img src="environment4.jpg">
+            <p>School Assembly Ground</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FUN -->
+<section class="section" id="fun">
+    <h2>Fun & Student Life</h2>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="fun1.jpg">
             <p>School Trip Adventure</p>
         </div>
 
         <div class="card">
-            <img src="fun1.jpg" alt="Students having fun">
-            <p>Students Enjoying School Events</p>
+            <img src="fun2.jpg">
+            <p>Students Enjoying Events</p>
         </div>
 
         <div class="card">
-            <img src="fun3.jpg" alt="Talent show">
+            <img src="fun3.jpg">
             <p>Talent Show Performance</p>
+        </div>
+
+        <div class="card">
+            <img src="fun4.jpg">
+            <p>Cultural Day Celebration</p>
         </div>
 
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Moleli High School | Official Gallery</p>
+    <p>© 2026 Moleli High School Official Gallery</p>
 </footer>
 
 </body>
