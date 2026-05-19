@@ -1,79 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="molelilogo.png">
-<title>Gallery</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Moleli High School Gallery</title>
 
 <style>
-body
-   <!-- SCHOOL MAGAZINE SECTION -->
-<div class="news-box">
 
-    <h2>School Magazine</h2>
-
-    <p>
-        Click below to read the official school magazine.
-    </p>
-
-    <!-- Open PDF in new tab -->
-    <p>
-        <a href="MoleliMagazine.pdf" target="_blank">
-            📖 Open Moleli Magazine (PDF)
-        </a>
-    </p>
-
-    <!-- Embedded PDF viewer -->
-    <iframe 
-        src="Molelimagazine.pdf" 
-        width="100%" 
-        height="600px"
-        style="border: none; border-radius: 10px;">
-    </iframe>
-
-</div> 
-    {
-    font-family: Arial;
-    text-align: center;
-    background-color: #f2f2f2;
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
 }
 
+/* HEADER */
+header{
+    background:darkgreen;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* NAVIGATION */
 nav{
-    margin-bottom: 20px;
+    background:#004d00;
+    padding:12px;
+    text-align:center;
 }
 
 nav a{
-    margin: 10px;
-    text-decoration: none;
-    color: darkblue;
-    font-weight: bold;
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+    font-weight:bold;
 }
 
-img{
-    width: 300px;
-    height: 200px;
-    margin: 15px;
-    border-radius: 10px;
-    border: 3px solid black;
+nav a:hover{
+    color:yellow;
 }
+
+/* SECTION */
+.section{
+    padding:30px;
+    text-align:center;
+}
+
+.section h2{
+    color:darkgreen;
+    margin-bottom:20px;
+}
+
+/* GALLERY GRID */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:10px;
+}
+
+/* IMAGE CARD */
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card p{
+    padding:15px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* FOOTER */
+footer{
+    background:#004d00;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<h1>School Gallery</h1>
+<header>
+    <h1>Moleli High School Gallery</h1>
+    <p>Academics • Sports • Fun Activities</p>
+</header>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="news.html">News</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
+    <a href="#academics">Academics</a>
+    <a href="#sports">Sports</a>
+    <a href="#fun">Fun</a>
 </nav>
 
-<img src="not.jpg" alt="Picture 1">
+<!-- ACADEMICS SECTION -->
+<section class="section" id="academics">
+    <h2>Academic Activities</h2>
 
-<img src="robotics.jpg" alt="Picture 2">
+    <div class="gallery">
+
+        <div class="card">
+            <img src="academic1.jpg" alt="Students studying">
+            <p>Students Studying in Class</p>
+        </div>
+
+        <div class="card">
+            <img src="academic2.jpg" alt="Computer lab">
+            <p>Computer Laboratory</p>
+        </div>
+
+        <div class="card">
+            <img src="academic3.jpg" alt="Science lesson">
+            <p>Science Practical Lesson</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SPORTS SECTION -->
+<section class="section" id="sports">
+    <h2>Sports Activities</h2>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="sports1.jpg" alt="Football match">
+            <p>Football Team Match</p>
+        </div>
+
+        <div class="card">
+            <img src="sports2.jpg" alt="Basketball">
+            <p>Basketball Training</p>
+        </div>
+
+        <div class="card">
+            <img src="sports3.jpg" alt="Athletics">
+            <p>Athletics Competition</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FUN SECTION -->
+<section class="section" id="fun">
+    <h2>Fun & School Life</h2>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="fun1.jpg" alt="School trip">
+            <p>School Trip Adventure</p>
+        </div>
+
+        <div class="card">
+            <img src="fun2.jpg" alt="Students having fun">
+            <p>Students Enjoying School Events</p>
+        </div>
+
+        <div class="card">
+            <img src="fun3.jpg" alt="Talent show">
+            <p>Talent Show Performance</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Moleli High School | Official Gallery</p>
+</footer>
 
 </body>
 </html>
