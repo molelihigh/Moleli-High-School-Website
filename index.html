@@ -1,322 +1,561 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official website of Moleli High School.">
-  <title>Moleli High School Official Website</title>
-  <link rel="icon" type="image/x-icon" href="molelilogo.png">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #e8f5e9;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="msvalidate.01" content="A233C636487F3D4EDD3758E2E3D9114A">
+<meta name="google-site-verification" content="VZqoCS_Ajcn6eVThnFTJmdxHBh_vMWRR4AztOgEb0Jo">
+
+<meta name="description" content="Official website of Moleli High School">
+
+<title>Moleli High School Official Website</title>
+
+<link rel="icon" type="image/x-icon" href="molelilogo.png">
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#e8f5e9;
+}
+
+/* HEADER */
+
+header{
+    background:green;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+header img{
+    width:120px;
+}
+
+/* NAVBAR */
+
+nav{
+    background:linear-gradient(90deg,#b30000,#ff1a1a);
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+    display:inline-block;
+}
+
+nav a:hover{
+    background:white;
+    color:red;
+}
+
+.register-btn{
+    background:green;
+}
+
+.register-btn:hover{
+    background:yellow;
+    color:black;
+}
+
+/* HERO SLIDER */
+
+.hero-slider{
+    width:100%;
+    height:500px;
+    overflow:hidden;
+    position:relative;
+}
+
+.slides{
+    display:flex;
+    width:300%;
+    height:100%;
+    animation:slide 18s infinite;
+}
+
+.slide{
+    width:100vw;
+    height:100%;
+    position:relative;
+    flex-shrink:0;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* DARK OVERLAY */
+
+.slide::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    top:0;
+    left:0;
+}
+
+/* TEXT */
+
+.slide-text{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    color:white;
+    z-index:2;
+    max-width:600px;
+}
+
+.slide-text h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.slide-text p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    background:green;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:darkgreen;
+    transform:scale(1.05);
+}
+
+/* SLIDER ANIMATION */
+
+@keyframes slide{
+
+    0%{
+        transform:translateX(0);
     }
 
-    header {
-      background-color: green;
-      color: white;
-      padding: 20px;
-      text-align: center;
+    20%{
+        transform:translateX(0);
     }
 
-    header img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 10px;
+    25%{
+        transform:translateX(-100vw);
     }
 
-    nav {
-      background: linear-gradient(90deg, #b30000, #ff1a1a);
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    45%{
+        transform:translateX(-100vw);
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      padding: 10px 18px;
-      font-weight: bold;
-      border-radius: 30px;
-      display: inline-block;
-      transition: 0.3s;
+    50%{
+        transform:translateX(-200vw);
     }
 
-    nav a:hover {
-      background: white;
-      color: red;
+    70%{
+        transform:translateX(-200vw);
     }
 
-    .register-btn {
-      background: green;
+    75%{
+        transform:translateX(0);
     }
 
-    /* SLIDER */
-    .hero-slider {
-      width: 100%;
-      height: 500px;
-      overflow: hidden;
-      position: relative;
+    100%{
+        transform:translateX(0);
+    }
+}
+
+/* CONTENT */
+
+section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:green;
+}
+
+/* MAP BUTTON */
+
+.map-button{
+    background:green;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.map-button:hover{
+    background:darkgreen;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b3d0b;
+    color:white;
+    padding:40px 20px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:yellow;
+}
+
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.footer-box{
+    flex:1;
+    min-width:220px;
+    margin:10px;
+}
+
+/* NEWSLETTER */
+
+.newsletter-input{
+    padding:12px;
+    width:80%;
+    border:none;
+    border-radius:5px;
+}
+
+.newsletter-button{
+    padding:12px 25px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.newsletter-button:hover{
+    background:darkred;
+}
+
+.bottom-footer{
+    text-align:center;
+    margin-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav a{
+        display:block;
+        margin:8px 0;
     }
 
-    .slides {
-      display: flex;
-      width: 300%;
-      height: 100%;
-      animation: slideShow 15s infinite;
+    .hero-slider{
+        height:320px;
     }
 
-    .slide {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      flex-shrink: 0;
+    .slide-text{
+        left:5%;
+        right:5%;
     }
 
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .slide-text h1{
+        font-size:30px;
     }
 
-    .slide-text {
-      position: absolute;
-      top: 50%;
-      left: 8%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 25px;
-      border-radius: 12px;
-      max-width: 500px;
+    .slide-text p{
+        font-size:16px;
     }
+}
 
-    .slide-text h1 {
-      margin-top: 0;
-      color: white;
-      font-size: 2.5rem;
-    }
+</style>
 
-    .btn {
-      display: inline-block;
-      background: green;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    @keyframes slideShow {
-      0%, 30% { transform: translateX(0); }
-      33%, 63% { transform: translateX(-100%); }
-      66%, 96% { transform: translateX(-200%); }
-      100% { transform: translateX(0); }
-    }
-
-    section {
-      padding: 20px;
-      background: white;
-      margin: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: green;
-    }
-
-    .map-button {
-      padding: 12px 20px;
-      background: green;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #0b3d0b;
-      color: white;
-      padding: 40px 20px;
-      margin-top: 40px;
-    }
-
-    .footer-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .footer-box {
-      flex: 1;
-      min-width: 220px;
-      margin: 10px;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .newsletter-input {
-      padding: 12px;
-      width: 80%;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .newsletter-button {
-      padding: 12px 25px;
-      background: red;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .bottom-footer {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-
-      .hero-slider {
-        height: 300px;
-      }
-
-      .slide-text {
-        left: 5%;
-        right: 5%;
-        max-width: none;
-        padding: 15px;
-      }
-
-      .slide-text h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
+
 <header>
-  <img src="methodistlogo.png" alt="Moleli High School Logo">
-  <h1>Welcome to Moleli High School</h1>
-  <p>Excellence and Discipline</p>
+
+<img src="methodistlogo.png" alt="School Logo">
+
+<h1>Welcome to Moleli High School</h1>
+
+<p>Excellence and Discipline</p>
+
 </header>
 
+<!-- NAVIGATION -->
+
 <nav>
-  <a href="index.html">Home</a>
-  <a href="aboutus.html">About Us</a>
-  <a href="news.html">News</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-  <a href="reg.html" class="register-btn">Register Now</a>
+
+<a href="index.html">Home</a>
+<a href="aboutus.html">About Us</a>
+<a href="news.html">News</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+<a href="reg.html" class="register-btn">
+Register Now
+</a>
+
 </nav>
 
 <!-- HERO SLIDER -->
+
 <section class="hero-slider">
-  <div class="slides">
-    <div class="slide">
-      <img src="methodistlogo.png" alt="Slide 1">
-      <div class="slide-text">
-        <h1>Welcome to Moleli High School</h1>
-        <p>Excellence and Discipline</p>
-        <a href="aboutus.html" class="btn">Learn More</a>
-      </div>
-    </div>
 
-    <div class="slide">
-      <img src="methodistlogo.png" alt="Slide 2">
-      <div class="slide-text">
-        <h1>Quality Education</h1>
-        <p>Empowering students for a brighter future.</p>
-        <a href="academics.html" class="btn">Our Academics</a>
-      </div>
-    </div>
+<div class="slides">
 
-    <div class="slide">
-      <img src="methodistlogo.png" alt="Slide 3">
-      <div class="slide-text">
-        <h1>Sports and Talent Development</h1>
-        <p>Building champions in academics and athletics.</p>
-        <a href="gallery.html" class="btn">View Gallery</a>
-      </div>
-    </div>
-  </div>
+<!-- SLIDE 1 -->
+
+<div class="slide">
+
+<img src="school1.jpg" alt="School Campus">
+
+<div class="slide-text">
+
+<h1>Welcome to Moleli High School</h1>
+
+<p>
+Excellence and Discipline
+</p>
+
+<a href="aboutus.html" class="btn">
+Learn More
+</a>
+
+</div>
+
+</div>
+
+<!-- SLIDE 2 -->
+
+<div class="slide">
+
+<img src="molelilogo.png" alt="Students">
+
+<div class="slide-text">
+
+<h1>Quality Education</h1>
+
+<p>
+Empowering students for a brighter future.
+</p>
+
+<a href="academics.html" class="btn">
+Our Academics
+</a>
+
+</div>
+
+</div>
+
+<!-- SLIDE 3 -->
+
+<div class="slide">
+
+<img src="sports.jpg" alt="Sports">
+
+<div class="slide-text">
+
+<h1>Sports and Talent Development</h1>
+
+<p>
+Building champions in academics and athletics.
+</p>
+
+<a href="gallery.html" class="btn">
+View Gallery
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+<!-- ABOUT -->
 
 <section>
-  <h2>Welcome to the Official Moleli High Website</h2>
-  <p>
-    Website designed and developed by
-    <strong>Rera Sheunesu Blessing</strong>
-    (Upper 6 Boy) in 2026 for Moleli High School.
-  </p>
+
+<h2>Welcome to the Official Moleli High Website</h2>
+
+<p>
+Website designed and developed by
+<strong>Rera Sheunesu Blessing</strong>
+(Upper 6 Boy) in 2026 for Moleli High School.
+</p>
+
 </section>
 
+<!-- MAP -->
+
 <section>
-  <h2>Our School Location</h2>
-  <p>Find Moleli High School easily using Google Maps.</p>
-  <a href="https://maps.app.goo.gl/8CesHpkyHBzRjty78" target="_blank">
-    <button class="map-button">View on Google Maps</button>
-  </a>
+
+<h2>Our School Location</h2>
+
+<p>
+Find Moleli High School easily using Google Maps.
+</p>
+
+<a href="https://maps.app.goo.gl/8CesHpkyHBzRjty78" target="_blank">
+
+<button class="map-button">
+View on Google Maps
+</button>
+
+</a>
+
 </section>
+
+<!-- FOOTER -->
 
 <footer>
-  <div class="footer-container">
-    <div class="footer-box">
-      <h2 style="color:white;">Moleli High School</h2>
-      <p>
-        Nurturing young minds to become tomorrow's leaders through quality education.
-      </p>
-    </div>
 
-    <div class="footer-box">
-      <h3>Quick Links</h3>
-      <p><a href="aboutus.html">About Us</a></p>
-      <p><a href="academics.html">Academics</a></p>
-      <p><a href="gallery.html">Gallery</a></p>
-    </div>
+<div class="footer-container">
 
-    <div class="footer-box">
-      <h3>Contact Information</h3>
-      <p>Private Bag 927, Norton, Zimbabwe</p>
-      <p>+27 78 139 9952</p>
-      <p>sheunesurera@gmail.com</p>
-    </div>
+<div class="footer-box">
 
-    <div class="footer-box">
-      <h3>Stay Updated</h3>
-      <form action="https://formspree.io/f/mbdbrway" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" class="newsletter-input" required>
-        <br><br>
-        <button type="submit" class="newsletter-button">Subscribe</button>
-      </form>
-    </div>
-  </div>
+<h2 style="color:white;">
+Moleli High School
+</h2>
 
-  <hr style="margin:30px 0; border-color:#ffffff44;">
+<p>
+Nurturing young minds to become tomorrow's leaders through quality education and discipline.
+</p>
 
-  <div class="bottom-footer">
-    <p>&copy; 2026 Moleli High School. All rights reserved.</p>
-  </div>
+</div>
+
+<div class="footer-box">
+
+<h3>Quick Links</h3>
+
+<p><a href="aboutus.html">About Us</a></p>
+<p><a href="academics.html">Academics</a></p>
+<p><a href="admissions.html">Admissions</a></p>
+<p><a href="sports.html">Sports</a></p>
+<p><a href="clubs.html">Clubs</a></p>
+<p><a href="gallery.html">Gallery</a></p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Academic Resources</h3>
+
+<p>
+<a href="https://www.brainstake.tech" target="_blank">
+Student Portal
+</a>
+</p>
+
+<p><a href="lms.html">Learning Management System</a></p>
+<p><a href="calendar.html">Academic Calendar</a></p>
+<p><a href="dashboard.html">Historical Dashboard</a></p>
+<p><a href="library.html">Library</a></p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Contact Information</h3>
+
+<p>
+Private Bag 927,<br>
+Norton, Zimbabwe
+</p>
+
+<p>+27 78 139 9952</p>
+
+<p>
+sheunesurera@gmail.com
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Stay Updated</h3>
+
+<p>
+Subscribe to our newsletter
+</p>
+
+<form action="https://formspree.io/f/mbdbrway" method="POST">
+
+<input
+type="email"
+name="email"
+placeholder="Enter your email"
+class="newsletter-input"
+required
+>
+
+<br><br>
+
+<button type="submit" class="newsletter-button">
+Subscribe
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<hr style="margin:30px 0; border-color:#ffffff44;">
+
+<div class="bottom-footer">
+
+<p>
+&copy; 2026 Moleli High School.
+All rights reserved.
+</p>
+
+</div>
+
 </footer>
 
 </body>
-</html>
 
+</html>
